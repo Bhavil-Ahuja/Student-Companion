@@ -20,7 +20,7 @@ public class SecurityConfig {
     http.csrf(csrf -> csrf.disable())
             .logout(logout -> logout.disable())
         .authorizeHttpRequests(
-            auth -> auth.requestMatchers("/login", "/logout", "/register", "/delete").permitAll().anyRequest().authenticated())
+            auth -> auth.requestMatchers("/login", "/register").permitAll().anyRequest().authenticated())
         .sessionManagement(
             session -> session.sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
         .addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
