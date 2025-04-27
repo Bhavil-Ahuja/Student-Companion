@@ -8,17 +8,17 @@ import lombok.*;
 @Getter
 @Setter
 public class College {
-    @Column(nullable = false)
-    @Id
-    private Long id;
+  @Column(nullable = false)
+  @Id
+  private Long id;
 
-    @Column(nullable = false)
-    private String name;
+  @Column(nullable = false)
+  private String name;
 
-    public College() {}
+  public College() {}
 
-    public College(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
+  public College(Long id, String name) {
+    this.id = id;
+    this.name = name;
+  }
 }

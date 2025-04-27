@@ -1,62 +1,50 @@
 package org.example.dto;
 
 import jakarta.persistence.*;
-import lombok.*;
-
 import java.io.Serializable;
+import lombok.*;
 
 @Entity
 @Table(name = "user")
 @Getter
 @Setter
 public class User implements Serializable {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+  @Id
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  private Long id;
 
-    @Column(nullable = false)
-    private String username;
+  @Column(nullable = false)
+  private String username;
 
-    @Column(nullable = false)
-    private String password;
+  @Column(nullable = false)
+  private String password;
 
-    @Column
-    private String name;
+  @Column private String name;
 
-    @Column
-    private String email;
+  @Column private String email;
 
-    @Column
-    private String role;
+  @Column private String role;
 
-    @Column
-    private Long collegeId;
+  @Column private Long collegeId;
 
-    @Column
-    private String rollNo;
+  @Column private String rollNo;
 
-    @Column
-    private Long year;
+  @Column private Long year;
 
-    @Column
-    private Long semester;
+  @Column private Long semester;
 
-    @Column
-    private String batch;
+  @Column private String batch;
 
-    @Column
-    private String branch;
+  @Column private String branch;
 
-    @Column
-    private String createTs;
+  @Column private String createTs;
 
-    @Column
-    private String modifyTs;
+  @Column private String modifyTs;
 
-    public User() {}
+  public User() {}
 
-    public User(String username, String password) {
-        this.username = username;
-        this.password = password;
-    }
+  public User(String username, String password) {
+    this.username = username;
+    this.password = password;
+  }
 }
